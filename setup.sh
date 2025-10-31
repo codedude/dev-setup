@@ -9,12 +9,12 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/downl
 tar xf lazygit.tar.gz lazygit
 install lazygit -D -t /usr/local/bin/
 rm -f lazygit lazygit.tar.gz
-npm install -g tree-sitter-cli
+npm install -g tree-sitter-cli tree-sitter-regex tree-sitter-bash
 
 # Bash config
 touch ~/.bashrc
-echo -e "alias bashconfig=\"nvim ~/.bashrc\"\nalias bashreload=\"source ~/.bashrc\"" >> ~/.bashrc
-echo 'eval $(thefuck --alias)' >> ~/.bashrc
+echo -e "alias bashconfig=\"nvim ~/.bashrc\"\nalias bashreload=\"source ~/.bashrc\"" >>~/.bashrc
+echo 'eval $(thefuck --alias)' >>~/.bashrc
 
 # tmux conf
 touch ~/.tmux.conf
@@ -29,7 +29,7 @@ make install
 ln -sf /usr/local/bin/nvim /usr/bin/nvim
 cd ../ && rm -rf neovim
 
-echo -e "alias vi=nvim\nalias vim=nvim\nEDITOR=nvim" >> ~/.bashrc
+echo -e "alias vi=nvim\nalias vim=nvim\nEDITOR=nvim" >>~/.bashrc
 mv -f ~/.config/nvim{,.bak}
 mv -f ~/.local/share/nvim{,.bak}
 mv -f ~/.local/state/nvim{,.bak}
