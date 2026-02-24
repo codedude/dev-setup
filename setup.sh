@@ -35,6 +35,11 @@ ln -sf /usr/local/bin/nvim /usr/bin/nvim
 cd ../ && rm -rf neovim
 npm install -g tree-sitter-cli tree-sitter-regex tree-sitter-bash tree-sitter-go tree-sitter-perl tree-sitter-json tree-sitter-markdown tree-sitter-python @tree-sitter-grammars/tree-sitter-yaml tree-sitter-makefile
 
+# go conf
+apt install -y golang-go
+echo -e "export GOPATH=$HOME/go" >>~/.zshrc
+echo -e "export PATH=$PATH:$GOPATH/bin" >>~/.zshrc
+go install golang.org/x/tools/cmd/goimports@latest
 
 echo -e "alias vi=nvim\nalias vim=nvim\nEDITOR=nvim" >>~/.zshrc
 mv -f ~/.config/nvim{,.bak}
