@@ -4,7 +4,7 @@
 apt update
 apt install -y git curl zsh wget fzf ripgrep thefuck lsd fd-find nodejs npm tmux tldr luarocks
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 chsh -s $(which zsh)
 /bin/zsh
 
