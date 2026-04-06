@@ -1,13 +1,13 @@
-# Macos env setup 
+# Macos env setup
 
 ## yabai & skhd
 
-> (SKHD)[https://github.com/koekeishiya/skhd], (Yabai)[https://github.com/koekeishiya/yabai/wiki#quickstart-guide]
+> [SKHD](https://github.com/koekeishiya/skhd), [Yabai](https://github.com/koekeishiya/yabai/wiki#quickstart-guide)
 
 ### TODO
+
 - config skhd avec les commandes de yabai
 - config yabai
-
 
 ## tmux
 
@@ -18,7 +18,6 @@
 > The meta key is M.
 
 > Command prompt starts with <C-b :>, let's call it <CMD>
-
 
 - tmux help: <C-b ?> or "tmux lsk"
 - start tmux: tmux new
@@ -62,7 +61,6 @@
 - activate mouse: <CMD set -g mouse on>
 - conf file: ~/.tmux.conf (<CMD source ~/.tmux.conf>)
 
-
 ### TODO
-- copy vi style
 
+- copy vi style
