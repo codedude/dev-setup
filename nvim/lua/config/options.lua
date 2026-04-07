@@ -28,7 +28,7 @@ opt.conceallevel = 0 -- Hide * markup for bold and italic, but not markers with 
 opt.ruler = false -- Disable the default ruler
 opt.smoothscroll = false
 
-vim.lsp.inlay_hint.enable(false, { bufnr = 0 })
+vim.lsp.inlay_hint.enable(false)
 
 vim.lsp.config["zls"] = {
     -- Set to 'zls' if `zls` is in your PATH
@@ -55,3 +55,42 @@ vim.lsp.config["zls"] = {
     },
 }
 vim.lsp.enable("zls")
+
+vim.lsp.config["gopls"] = {
+    cmd = { "gopls" },
+    settings = {
+        gopls = {
+            experimentalPostfixCompletions = true,
+            analyses = {
+                fieldalignment = true,
+                nilness = true, -- default on
+                shadow = true,
+                unusedparams = true, -- default on
+                unusedvariable = false,
+                unusedwrite = true, -- default on
+                useany = true,
+            },
+            staticcheck = false,
+            semanticTokens = true,
+            codelenses = {
+                gc_details = true,
+                upgrade_dependency = true,
+                run_govulncheck = true,
+                tidy = true,
+                vendor = true,
+                test = true,
+            },
+            hints = {
+                assignVariableTypes = false,
+                compositeLiteralFields = false,
+                compositeLiteralTypes = false,
+                constantValues = false,
+                functionTypeParameters = false,
+                parameterNames = false,
+                rangeVariableTypes = false,
+            },
+            gofumpt = false,
+        },
+    },
+}
+vim.lsp.enable("gopls")
