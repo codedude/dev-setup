@@ -59,11 +59,7 @@ ZSH_THEME="robbyrussell"
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(
-    git
-    zsh-autosuggestions
-)
-
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting you-should-use zsh-bat)
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR=nvim
@@ -71,33 +67,24 @@ alias vim=nvim
 alias zshconfig="vim ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias dev="cd /Users/valentin/Dev"
-alias elan="cd /Users/valentin/Dev/Agence\ web/elan-numerique"
-alias pyenv="source ~/Dev/pyenv/bin/activate"
+alias dev="cd ~/dev"
+alias pyenv="source ~/dev/python_venv/bin/activate"
 
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/Users/valentin/.composer/vendor/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 alias fixlibrewolf="xattr -dr com.apple.quarantine /Applications/LibreWolf.app"
-#export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 source <(fzf --zsh)
-. "$HOME/.cargo/env"
 eval $(thefuck --alias)
 
-[ -f "/Users/valentin/.ghcup/env" ] && . "/Users/valentin/.ghcup/env" # ghcup-env
+alias tmuxs="~/.local/bin/tmux-sessionizer ~/dev/"
+
+
+
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/valentin/.docker/completions $fpath)
+fpath=(/Users/vparis/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
-
-alias tmuxs="~/.local/bin/tmux-sessionizer ~/Dev"
-
-alias ray="cd ~/Dev/raymania/"
-
-
-

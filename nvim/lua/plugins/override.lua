@@ -38,7 +38,7 @@ return {
                                 unusedwrite = true, -- default on
                                 useany = true,
                             },
-                            staticcheck = false,
+                            staticcheck = true,
                             semanticTokens = true,
                             codelenses = {
                                 gc_details = true,
