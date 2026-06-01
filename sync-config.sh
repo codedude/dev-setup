@@ -7,3 +7,4 @@ cp -R "$HOME_DIR"/.config/nvim nvim
 cp "$HOME_DIR"/.local/bin/tmux-sessionizer tmux-sessionizer
 cp "$HOME_DIR"/.tmux.conf .tmux.conf
 cp "$HOME_DIR"/.zshrc .zshrc
+cp "$HOME_DIR"/.config/ghostty/config ghostty.config

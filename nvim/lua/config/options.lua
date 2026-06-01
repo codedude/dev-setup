@@ -27,7 +27,6 @@ opt.autowrite = true -- Enable auto write
 opt.conceallevel = 0 -- Hide * markup for bold and italic, but not markers with substitutions
 opt.ruler = false -- Disable the default ruler
 opt.smoothscroll = false
-
 vim.lsp.inlay_hint.enable(false)
 
 vim.lsp.config["zls"] = {

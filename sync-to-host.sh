@@ -3,9 +3,10 @@
 set -eou
 
 mv -f ~/.config/nvim{,.bak}
-mv -f ~/.local/share/nvim{,.bak}
-mv -f ~/.local/state/nvim{,.bak}
-rm -rf ~/.cache/nvim
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/
 cp -R nvim ~/.config/nvim
 
 mv -f ~/.tmux.conf{,.bak}
@@ -16,5 +17,9 @@ cp .zshrc ~/.zshrc
 
 mkdir -p ~/.local/bin
 cp tmux-sessionizer ~/.local/bin
+
+mkdir -p ~/.config/ghostty
+mv ~/.config/ghostty/config{,.bak}
+cp ghostty.config ~/.config/ghostty/config
 
 source ~/.zshrc
