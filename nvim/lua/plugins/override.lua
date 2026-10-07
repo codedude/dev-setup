@@ -1,5 +1,16 @@
 return {
     {
+        "neovim/nvim-lspconfig",
+        opts = {
+            servers = {
+                pyright = {
+                    mason = false,
+                    autostart = false,
+                },
+            },
+        },
+    },
+    {
         "folke/snacks.nvim",
         opts = {
             explorer = {
@@ -15,11 +26,6 @@ return {
                     explorer = {
                         hidden = true,
                         ignored = false,
-                        layout = {
-                            layout = {
-                                width = 28,
-                            },
-                        },
                     },
                 },
             },

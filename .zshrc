@@ -59,10 +59,7 @@ ZSH_THEME="robbyrussell"
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(
-    git
-)
-
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting you-should-use zsh-bat)
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR=nvim
@@ -71,25 +68,26 @@ alias zshconfig="vim ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias dev="cd ~/dev"
-alias pyenv="source ~/dev/pyenv/bin/activate"
-
+alias pyenv="source ~/dev/python_venv/grpc-demo/bin/activate"
+alias almanac-venv="source ~/dev/almanac/backend/.venv/bin/activate"
+alias almanac="cd ~/dev/almanac/backend/ && almanac-venv"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 alias fixlibrewolf="xattr -dr com.apple.quarantine /Applications/LibreWolf.app"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 source <(fzf --zsh)
 eval $(thefuck --alias)
 
+alias tmuxs="~/.local/bin/tmux-sessionizer ~/dev/"
+
+
+
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/valentin/.docker/completions $fpath)
+fpath=(/Users/vparis/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-alias tmuxs="~/.local/bin/tmux-sessionizer ~/dev"
-
-
+. "$HOME/.local/bin/env"
