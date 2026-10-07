@@ -56,10 +56,9 @@ ZSH_THEME="robbyrussell"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting you-should-use zsh-bat)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR=nvim
@@ -76,13 +75,12 @@ export PATH="$HOME/go/bin:$PATH"
 alias fixlibrewolf="xattr -dr com.apple.quarantine /Applications/LibreWolf.app"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-you-should-use/you-should-use.plugin.zsh
 
 source <(fzf --zsh)
 eval $(thefuck --alias)
 
 alias tmuxs="~/.local/bin/tmux-sessionizer ~/dev/"
-
-
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/vparis/.docker/completions $fpath)
