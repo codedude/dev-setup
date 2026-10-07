@@ -70,7 +70,7 @@ alias vim=nvim
 alias zshconfig="vim ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias dev="cd /Users/valentin/dev"
+alias dev="cd ~/dev"
 alias pyenv="source ~/dev/pyenv/bin/activate"
 
 export PATH="/opt/homebrew/bin:$PATH"
@@ -91,8 +91,5 @@ compinit
 # End of Docker CLI completions
 
 alias tmuxs="~/.local/bin/tmux-sessionizer ~/dev"
-
-alias ray="cd ~/dev/raymania/"
-
 
 

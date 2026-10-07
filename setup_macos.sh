@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -eou
-
 brew install neovim \
   ripgrep \
   fd \
